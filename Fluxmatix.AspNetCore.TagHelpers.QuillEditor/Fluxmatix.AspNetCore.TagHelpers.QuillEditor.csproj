@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="node_modules\quill\dist\quill.bubble.css" />
+    <None Remove="node_modules\quill\dist\quill.core.css" />
+    <None Remove="node_modules\quill\dist\quill.min.js" />
+    <None Remove="node_modules\quill\dist\quill.snow.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="node_modules\quill\dist\quill.bubble.css" />
+    <EmbeddedResource Include="node_modules\quill\dist\quill.core.css" />
+    <EmbeddedResource Include="node_modules\quill\dist\quill.min.js" />
+    <EmbeddedResource Include="node_modules\quill\dist\quill.snow.css" />
+  </ItemGroup>
+</Project>
