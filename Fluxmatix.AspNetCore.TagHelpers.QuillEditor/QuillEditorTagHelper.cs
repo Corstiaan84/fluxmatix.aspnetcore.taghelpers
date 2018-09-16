@@ -21,21 +21,34 @@ namespace Fluxmatix.AspNetCore.TagHelpers.QuillEditor
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
+            output.TagName = "";
+
+            var attrStr = "";
+
+            foreach(var attr in context.AllAttributes)
+            {
+                if(attr.Name != "asp-for" || attr.Name == "id")
+                    attrStr += attr.Name + $"=\"{attr.Value}\" ";
+            }
+
+            var id = "quilleditor";
+
+            if (context.AllAttributes.ContainsName("id"))
+            {
+                id = context.AllAttributes["id"].Value.ToString();
+            }
+
+            attrStr += $"id=\"{id}\"";
+
+            var value = "";
+
             if(Content.Model != null)
             {
-                output.TagName = "";
-
-                var attrStr = "";
-
-                foreach(var attr in context.AllAttributes)
-                {
-                    if(attr.Name != "asp-for")
-                        attrStr += attr.Name + $"=\"{attr.Value}\" ";
-                }
-
-                output.Content.AppendHtmlLine($"<div id=\"quill-editor\" {attrStr}></div>");
-                output.Content.AppendHtmlLine($"<input type=\"hidden\" id=\"quill-editor-buffer\" name=\"{Content.Name}\" value=\"{WebUtility.HtmlEncode(Content.Model.ToString())}\" />");
+                value = WebUtility.HtmlEncode(Content.Model.ToString());
             }
+
+            output.Content.AppendHtmlLine($"<div {attrStr}></div>");
+            output.Content.AppendHtmlLine($"<input type=\"hidden\" id=\"{id}-buffer\" name=\"{Content.Name}\" value=\"{value}\" />");
         }
     }
 }
