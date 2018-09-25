@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluxmatix.AspNetCore.TagHelpers.QuillEditor", "Fluxmatix.AspNetCore.TagHelpers.QuillEditor\Fluxmatix.AspNetCore.TagHelpers.QuillEditor.csproj", "{24D78F75-DF54-4520-BC7E-EC76DA793783}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg", "Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg\Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg.csproj", "{82BF5EC7-B5C5-4418-983A-FE55E6E16756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{24D78F75-DF54-4520-BC7E-EC76DA793783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24D78F75-DF54-4520-BC7E-EC76DA793783}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24D78F75-DF54-4520-BC7E-EC76DA793783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
