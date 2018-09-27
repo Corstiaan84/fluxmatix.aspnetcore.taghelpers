@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.Runtime.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace DotNetProjects.Web.Lib.AspNetCore.Blog.TagHelpers
+namespace Fluxmatix.AspNetCore.TagHelpers
 {
     [HtmlTargetElement("img")]
     public class ResizeProxyImgTagHelper : TagHelper
@@ -16,12 +16,31 @@ namespace DotNetProjects.Web.Lib.AspNetCore.Blog.TagHelpers
         [HtmlAttributeName("resize-height")]
         public String ResizeHeight { get; set; }
 
+        [HtmlAttributeName("mask")]
+        public String Mask { get; set; }
+
+        [HtmlAttributeName("mask-trim")]
+        public bool MaskTrim { get; set; }
+
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            if (context.AllAttributes.ContainsName("src") && (ResizeWidth != null || ResizeHeight != null))
+            if (context.AllAttributes.ContainsName("src"))
             {
                 var src = context.AllAttributes["src"].Value;
-                var newSrc = $"//images.weserv.nl/?url={src}&w={ResizeWidth}&h={ResizeHeight}";
+                var newSrc = $"//images.weserv.nl/?url={src}";
+
+                if (!string.IsNullOrEmpty(ResizeWidth))
+                    newSrc += $"&w={ResizeWidth}";
+
+                if (!string.IsNullOrEmpty(ResizeHeight))
+                    newSrc += $"&h={ResizeHeight}";
+
+                if (!string.IsNullOrEmpty(Mask))
+                    newSrc += $"&mask={Mask}";
+
+                if (MaskTrim)
+                    newSrc += "&mtrim";
+
                 output.Attributes.SetAttribute("src", newSrc);
             }
         }
