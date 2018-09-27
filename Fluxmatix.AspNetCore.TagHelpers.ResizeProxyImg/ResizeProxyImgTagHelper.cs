@@ -24,7 +24,7 @@ namespace Fluxmatix.AspNetCore.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            if (context.AllAttributes.ContainsName("src"))
+            if (Apply())
             {
                 var src = context.AllAttributes["src"].Value;
                 var newSrc = $"//images.weserv.nl/?url={src}";
@@ -43,6 +43,14 @@ namespace Fluxmatix.AspNetCore.TagHelpers
 
                 output.Attributes.SetAttribute("src", newSrc);
             }
+        }
+
+        bool Apply()
+        {
+            if (!string.IsNullOrEmpty(ResizeWidth) || !string.IsNullOrEmpty(ResizeWidth) || Mask != null)
+                return true;
+
+            return false;
         }
     }
 }
