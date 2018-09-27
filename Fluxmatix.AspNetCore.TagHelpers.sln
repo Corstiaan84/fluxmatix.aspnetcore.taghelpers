@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluxmatix.AspNetCore.TagHel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg", "Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg\Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg.csproj", "{82BF5EC7-B5C5-4418-983A-FE55E6E16756}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample", "Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample\Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.csproj", "{04CA972A-3664-4696-9BD4-59FEF13EB593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82BF5EC7-B5C5-4418-983A-FE55E6E16756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04CA972A-3664-4696-9BD4-59FEF13EB593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CA972A-3664-4696-9BD4-59FEF13EB593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CA972A-3664-4696-9BD4-59FEF13EB593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CA972A-3664-4696-9BD4-59FEF13EB593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,19 @@
+﻿@model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
+@{
+    ViewData["Title"] = "Single editor";
+}
+
+@section Stylesheets {
+    <quill-editor-style-sheets></quill-editor-style-sheets>
+}
+
+@section Scripts {
+    <quill-editor-script></quill-editor-script>
+}
+
+<a asp-action="MultipleEditors" asp-controller="Home">Multiple editors example</a>
+
+<form asp-action="ShowContent" asp-controller="Home">
+    <quill-editor asp-for="Content1" style="height: 400px;"></quill-editor>
+    <button type="submit">Show content</button>
+</form>
