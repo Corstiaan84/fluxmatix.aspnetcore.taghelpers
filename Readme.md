@@ -156,7 +156,7 @@ Editors:
 
 #### Using Razor view sections
 
-For non-trivial apps you'll probably want to use Razor view sections for organise your views more cleanly. This is an example of using the Quill editor with Razor view sections.
+For non-trivial apps you'll probably want to use Razor view sections to organise your views more cleanly. This is an example of using the Quill editor with Razor view sections.
 
 ```
 @model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
@@ -211,3 +211,4 @@ PRs accepted.
 
 ## License
 
+GNU GPLv3

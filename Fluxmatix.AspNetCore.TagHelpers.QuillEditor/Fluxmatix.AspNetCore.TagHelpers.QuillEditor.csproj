@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Title>Quill WYSIWYG editor taghelper for asp.net core</Title>
-    <Description></Description>
+    <Description>Quill WYSIWYG editor taghelper for asp.net core</Description>
     <PackageId>Fluxmatix.AspNetCore.TagHelpers.QuillEditor</PackageId>
     <Version>0.2.0</Version>
     <Authors>Corstiaan Hesselink</Authors>
