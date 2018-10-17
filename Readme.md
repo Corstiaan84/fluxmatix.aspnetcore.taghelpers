@@ -17,6 +17,8 @@ Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers
     - Single editor
     - Multiple editors on the same page
   - Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
+    - Dimensions
+    - Masks
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -62,11 +64,27 @@ Install-Package Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 ### Fluxmatix.AspNetCore.TagHelpers.QuillEditor
 
+#### Single editor
+
+```
+
+```
+
+#### Multiple editors on the same page
+
 ```
 
 ```
 
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
+
+#### Dimensions
+
+```
+
+```
+
+#### Masks
 
 ```
 
