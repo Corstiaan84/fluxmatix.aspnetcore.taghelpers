@@ -47,7 +47,7 @@ namespace Fluxmatix.AspNetCore.TagHelpers
 
         bool Apply()
         {
-            if (!string.IsNullOrEmpty(ResizeWidth) || !string.IsNullOrEmpty(ResizeWidth) || Mask != null)
+            if (!string.IsNullOrEmpty(ResizeWidth) || !string.IsNullOrEmpty(ResizeHeight) || Mask != null)
                 return true;
 
             return false;
