@@ -29,7 +29,7 @@ Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers
 
 TagHelpers in ASP.NET Core are tiny bundles of joy. They allow developers to create html controls that extend regular html tags or create custom tags that render custom html.
 
-### Background Fluxmatix.AspNetCore.TagHelpers.QuillEditor
+### Background Fluxmatix.AspNetCore.TagHelpers.QuillEditor [#background-fluxmatix-aspnetcore-taghelpers-quilleditor]
 
 This taghelpers enables developers to easily add the popular [Quill WYSIWYG](https://quilljs.com/) editor to a form, with model binding. It also takes care of all the javascript and css files that the editor requires.
 
