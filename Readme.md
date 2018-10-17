@@ -133,14 +133,46 @@ Add the Quill editor to a `form` and add the Quill javascripts at the end of you
 
 #### Multiple editors on the same page
 
+To add multiple Quill editor to the same page, make sue to set element ids on both the Quill javascripts tag and the individual Quill editor tags. Notice the corresponding ids on both the javascript tag and the editor tags.
+
+Javascript:
+
+```
+<quill-editor-script for-editors="editor1,editor2,editor3"></quill-editor-script>
 ```
 
+Editors:
+
+```
+@model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
+...
+<form asp-action="ShowContentMultiple" asp-controller="Home">
+    <quill-editor asp-for="Content1" id="editor1" style="height: 200px;"></quill-editor>
+    <quill-editor asp-for="Content2" id="editor2" style="height: 200px;"></quill-editor>
+    <quill-editor asp-for="Content3" id="editor3" style="height: 200px;"></quill-editor>
+    <button type="submit">Show content</button>
+</form>
 ```
 
 ### Using Razor view sections
 
-```
+For non-trivial apps you'll probably want to use Razor view sections for organize your views more cleanly. This is an example of using the Quill editor with Razor view sections.
 
+```
+@model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
+...
+@section Stylesheets {
+    <quill-editor-style-sheets></quill-editor-style-sheets>
+}
+
+@section Scripts {
+    <quill-editor-script></quill-editor-script>
+}
+
+<form asp-action="ShowContent" asp-controller="Home">
+    <quill-editor asp-for="Content1" style="height: 400px;"></quill-editor>
+    <button type="submit">Show content</button>
+</form>
 ```
 
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
