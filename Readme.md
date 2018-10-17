@@ -31,13 +31,13 @@ TagHelpers in ASP.NET Core are tiny bundles of joy. They allow developers to cre
 
 ### Background Fluxmatix.AspNetCore.TagHelpers.QuillEditor
 
-This taghelpers enables developers to easily add the popular [Quill WYSIWYG](https://quilljs.com/) editor to a form, with model binding. It also takes care of all the javascript and css files that the editor requires.
+These taghelpers enable developers to easily add the popular [Quill WYSIWYG](https://quilljs.com/) editor to a form, with model binding. It also takes care of all the javascript and css files that the editor requires.
 
 The `Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample` web project is included in the source to play around with the options and see the editor in action.
 
 ### Background Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
-This taghelpers enables developers to easily transform any regular `img` tag into an image resizing beast by sending the `src` through the [images.weserv.nl](https://images.weserv.nl/) proxy.
+These taghelpers enable developers to easily transform any regular `img` tag into an image resizing beast by sending the `src` through the [images.weserv.nl](https://images.weserv.nl/) proxy.
 
 The `Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg.Sample` web project is included in the source to play around with the options and see the image resizing in action.
 
@@ -65,7 +65,7 @@ Install-Package Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 Register the Quill editor taghelper in `Startup.cs`:
 
-```
+```c#
 using Fluxmatix.AspNetCore.TagHelpers.QuillEditor;
 
 ...
@@ -98,13 +98,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 Inside `_ViewImports.cshtml` add the following line:
 
-```
+```c#
 @addTagHelper *, Fluxmatix.AspNetCore.TagHelpers.QuillEditor
 ```
 
 Register the Quill stylesheets in the head of your page/view
 
-```
+```html
 <head>
 	...
 	<quill-editor-style-sheets></quill-editor-style-sheets>
@@ -116,7 +116,7 @@ Register the Quill stylesheets in the head of your page/view
 
 Add the Quill editor to a `form` and add the Quill javascripts at the end of your `body` tag:
 
-```
+```html
 @model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
 ...
 <body>
@@ -135,13 +135,13 @@ To add multiple Quill editor to the same page, make sure to set element ids on b
 
 Javascript:
 
-```
+```html
 <quill-editor-script for-editors="editor1,editor2,editor3"></quill-editor-script>
 ```
 
 Editors:
 
-```
+```html
 @model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
 ...
 <form asp-action="ShowContentMultiple" asp-controller="Home">
@@ -156,7 +156,7 @@ Editors:
 
 For non-trivial apps you'll probably want to use Razor view sections to organise your views more cleanly. This is an example of using the Quill editor with Razor view sections.
 
-```
+```html
 @model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
 ...
 @section Stylesheets {
@@ -177,7 +177,7 @@ For non-trivial apps you'll probably want to use Razor view sections to organise
 
 Inside `_ViewImports.cshtml` add the following line:
 
-```
+```c#
 @addTagHelper *, Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 ```
 
@@ -185,7 +185,7 @@ Inside `_ViewImports.cshtml` add the following line:
 
 Add the `resize-height` and/or the `resize-width` attributes on any `img` tag:
 
-```
+```html
 <img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" resize-width="400" resize-height="400" />
 ```
 
@@ -193,13 +193,13 @@ Add the `resize-height` and/or the `resize-width` attributes on any `img` tag:
 
 Set any of the available [masks](https://images.weserv.nl/#mask) using the `mask` attribute:
 
-```
+```html
 <img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" mask="circle" />
 ```
 
 Or combine size and mask:
 
-```
+```html
 <img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" mask="triangle" resize-width="200" />
 ```
 
