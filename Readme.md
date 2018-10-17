@@ -14,6 +14,8 @@ Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers
   - Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 - [Usage](#usage)
   - Fluxmatix.AspNetCore.TagHelpers.QuillEditor
+    - Single editor
+    - Multiple editors on the same page
   - Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 - [Contribute](#contribute)
 - [License](#license)
@@ -32,15 +34,11 @@ This taghelpers enables developers to easily add the popular [Quill WYSIWYG](htt
 
 The `Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample` web project is included in the source to play around with the options and see the editor in action.
 
-
-
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 This taghelpers enables developers to easily transform any regular `img` tag into a image resizing beast by sending the `src` through the [images.weserv.nl](https://images.weserv.nl/) proxy.
 
 The `Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg.Sample` web project is included in the source to play around with the options and see the image resizing in action.
-
-
 
 ## Install
 
@@ -52,8 +50,6 @@ In your ASP.NET Core project run:
 Install-Package Fluxmatix.AspNetCore.TagHelpers.QuillEditor	
 ```
 
-
-
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 In your ASP.NET Core project run:
@@ -61,8 +57,6 @@ In your ASP.NET Core project run:
 ```bash
 Install-Package Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 ```
-
-
 
 ## Usage
 
@@ -72,15 +66,11 @@ Install-Package Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 ```
 
-
-
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 ```
 
 ```
-
-
 
 ## Contribute
 
@@ -90,8 +80,5 @@ PRs accepted.
 
 Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
-
-
 ## License
 
-[MIT © Richard McRichface.](../LICENSE)
