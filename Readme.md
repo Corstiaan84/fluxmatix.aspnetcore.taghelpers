@@ -1,5 +1,7 @@
 # Fluxmatix.AspNetCore.Taghelpers 
 
+[![BuitlWithDot.Net shield](https://builtwithdot.net/project/179/fluxmatix-asp.net-core-taghelpers/badge)](https://builtwithdot.net/project/179/fluxmatix-asp.net-core-taghelpers)
+
 Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers that I initially created when building [BuiltWithDot.Net](https://builtwithdot.net).
 
 
