@@ -16,6 +16,7 @@ Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers
   - Fluxmatix.AspNetCore.TagHelpers.QuillEditor
     - Single editor
     - Multiple editors on the same page
+    - Using Razor view sections
   - Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
     - Dimensions
     - Masks
@@ -64,13 +65,79 @@ Install-Package Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
 ### Fluxmatix.AspNetCore.TagHelpers.QuillEditor
 
-#### Single editor
+Register the Quill editor taghelper in `Startup.cs`:
 
 ```
+using Fluxmatix.AspNetCore.TagHelpers.QuillEditor;
 
+...
+
+public void ConfigureServices(IServiceCollection services)
+{
+	// your code...
+
+    services.AddQuillEditor();
+
+    // or set some options like so:
+
+    //services.AddQuillEditor(obj =>
+    //{
+    //    obj.Theme = "bubble";
+    //});
+    
+    // rest of your code...
+}
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    // your code...
+
+    app.UseQuillEditor();
+    
+    // rest of your code...
+}
+```
+
+Inside `ViewImports.cshtml` add the following line:
+
+```
+@addTagHelper *, Fluxmatix.AspNetCore.TagHelpers.QuillEditor
+```
+
+Register the Quill stylesheets in the head of your page/view
+
+```
+<head>
+	...
+	<quill-editor-style-sheets></quill-editor-style-sheets>
+	...
+</head>
+```
+
+#### Single editor
+
+Add the Quill editor to a `form` and add the Quill javascripts at the end of your `body` tag:
+
+```
+@model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
+...
+<body>
+	<form asp-action="ShowContent" asp-controller="Home">
+        <quill-editor asp-for="Content1" style="height: 400px;"></quill-editor>
+        <button type="submit">Show content</button>
+	</form>
+	...
+	<quill-editor-script></quill-editor-script>
+</body>
 ```
 
 #### Multiple editors on the same page
+
+```
+
+```
+
+### Using Razor view sections
 
 ```
 
@@ -91,8 +158,6 @@ Install-Package Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 ```
 
 ## Contribute
-
-See [the contribute file](contribute.md)!
 
 PRs accepted.
 

@@ -2,14 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <Title>Quill WYSIWYG editor for asp.net core</Title>
+    <Title>Quill WYSIWYG editor taghelper for asp.net core</Title>
     <Description></Description>
     <PackageId>Fluxmatix.AspNetCore.TagHelpers.QuillEditor</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Corstiaan Hesselink</Authors>
     <Company>Fluxmatix</Company>
-    <PackageProjectUrl></PackageProjectUrl>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/Corstiaan84/fluxmatix.aspnetcore.taghelpers</RepositoryUrl>
     <PackageTags>wysiwyg;quill;richtext;html</PackageTags>
     <IncludeSource>false</IncludeSource>
   </PropertyGroup>

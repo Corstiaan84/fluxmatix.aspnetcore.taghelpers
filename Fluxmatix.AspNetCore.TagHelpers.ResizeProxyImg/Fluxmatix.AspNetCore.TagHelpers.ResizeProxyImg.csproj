@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Title>images.weserv.nl resize proxy taghelper for asp.net core</Title>
+    <Description></Description>
+    <PackageId>Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Corstiaan Hesselink</Authors>
+    <Company>Fluxmatix</Company>
+    <RepositoryUrl>https://github.com/Corstiaan84/fluxmatix.aspnetcore.taghelpers</RepositoryUrl>
+    <PackageTags>image;images;resize;</PackageTags>
+    <IncludeSource>false</IncludeSource>
   </PropertyGroup>
 
   <ItemGroup>
