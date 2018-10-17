@@ -154,7 +154,7 @@ Editors:
 </form>
 ```
 
-### Using Razor view sections
+#### Using Razor view sections
 
 For non-trivial apps you'll probably want to use Razor view sections for organize your views more cleanly. This is an example of using the Quill editor with Razor view sections.
 
