@@ -39,7 +39,7 @@ The `Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample` web project is included
 
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
-This taghelpers enables developers to easily transform any regular `img` tag into a image resizing beast by sending the `src` through the [images.weserv.nl](https://images.weserv.nl/) proxy.
+This taghelpers enables developers to easily transform any regular `img` tag into an image resizing beast by sending the `src` through the [images.weserv.nl](https://images.weserv.nl/) proxy.
 
 The `Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg.Sample` web project is included in the source to play around with the options and see the image resizing in action.
 
@@ -98,7 +98,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 }
 ```
 
-Inside `ViewImports.cshtml` add the following line:
+Inside `_ViewImports.cshtml` add the following line:
 
 ```
 @addTagHelper *, Fluxmatix.AspNetCore.TagHelpers.QuillEditor
@@ -133,7 +133,7 @@ Add the Quill editor to a `form` and add the Quill javascripts at the end of you
 
 #### Multiple editors on the same page
 
-To add multiple Quill editor to the same page, make sue to set element ids on both the Quill javascripts tag and the individual Quill editor tags. Notice the corresponding ids on both the javascript tag and the editor tags.
+To add multiple Quill editor to the same page, make sure to set element ids on both the Quill javascripts tag and the individual Quill editor tags. Notice the corresponding ids on both the javascript tag and the editor tags.
 
 Javascript:
 
@@ -156,7 +156,7 @@ Editors:
 
 #### Using Razor view sections
 
-For non-trivial apps you'll probably want to use Razor view sections for organize your views more cleanly. This is an example of using the Quill editor with Razor view sections.
+For non-trivial apps you'll probably want to use Razor view sections for organise your views more cleanly. This is an example of using the Quill editor with Razor view sections.
 
 ```
 @model Fluxmatix.AspNetCore.TagHelpers.QuillEditor.Sample.Models.SampleModel
@@ -177,23 +177,37 @@ For non-trivial apps you'll probably want to use Razor view sections for organiz
 
 ### Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
 
-#### Dimensions
+Inside `_ViewImports.cshtml` add the following line:
 
 ```
+@addTagHelper *, Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg
+```
 
+#### Dimensions
+
+Add the `resize-height` and/or the `resize-width` attributes on any `img` tag:
+
+```
+<img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" resize-width="400" resize-height="400" />
 ```
 
 #### Masks
 
+Set any of the available [masks](https://images.weserv.nl/#mask) using the `mask` attribute:
+
+```
+<img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" mask="circle" />
 ```
 
+Or combine size and mask:
+
+```
+<img src="https://www.what-dog.net/Images/faces2/scroll001.jpg" mask="triangle" resize-width="200" />
 ```
 
 ## Contribute
 
 PRs accepted.
-
-Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
