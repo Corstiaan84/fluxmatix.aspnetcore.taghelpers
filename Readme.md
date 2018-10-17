@@ -7,7 +7,7 @@ Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers
 ## Table of Contents
 
 - [Background](#background)
-  - [Background Fluxmatix.AspNetCore.TagHelpers.QuillEditor](#background-fluxmatix.aspnetcore.taghelpers.quilleditor) 
+  - [Background Fluxmatix.AspNetCore.TagHelpers.QuillEditor](#background-fluxmatixaspnetcoretaghelpersquilleditor) 
   - [Background Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg](#Background Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg) 
 - [Install](#install)
   - [Install Fluxmatix.AspNetCore.TagHelpers.QuillEditor](#Install Fluxmatix.AspNetCore.TagHelpers.QuillEditor)
