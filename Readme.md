@@ -16,7 +16,7 @@ Fluxmatix.AspNetCore.Taghelpers is a collection of handy ASP.NET Core TagHelpers
   - [Usage Fluxmatix.AspNetCore.TagHelpers.QuillEditor](#usage-fluxmatixaspnetcoretaghelpersquilleditor)
     - [Single editor](#single-editor)
     - [Multiple editors on the same page](#multiple-editors-on-the-same-page)
-    - [Using Razor view sections](#Using Razor view sections)
+    - [Using Razor view sections](#using-razor-view-sections)
   - [Usage Fluxmatix.AspNetCore.TagHelpers.ResizeProxyImg](#usage-fluxmatixaspnetcoretaghelpersresizeproxyimg)
     - [Dimensions](#dimensions)
     - [Masks](#masks)
