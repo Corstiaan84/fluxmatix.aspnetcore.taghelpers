@@ -79,7 +79,8 @@ namespace Fluxmatix.AspNetCore.TagHelpers.QuillEditor
                   [{{ 'color': [] }}, {{ 'background': [] }}],
                   [{{ 'font': [] }}],
                   [{{ 'align': [] }}],
-
+                  
+                  ['link', 'image'],
                   ['clean']
                 ];
 
